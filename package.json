@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "name": "monster-hunter-guild-cris-v",
+  "version": "1.0.0",
+  "description": "monster-hunter-build-cris-version",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.0",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}
