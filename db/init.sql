@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS monster_hunter_guild_cris_v;
+
+USE monster_hunter_guild_cris_v;
