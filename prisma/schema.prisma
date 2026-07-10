@@ -7,12 +7,21 @@ datasource db {
   provider = "mysql"
 }
 
-model User {
 
-  id Int @id @default(autoincrement())
+model Guild {
+  id     String @id @default(uuid())
+  name   String
+  region String?
+  headquarters String?
+  hunters Hunter[]
+}
 
-  name String
+model Hunter {
+  id    String @id @default(uuid())
+  name  String
+  rank  Int
+  experiencePoints Int
 
-  email String @unique
-
+  guildId   String
+  guild Guild @relation(fields: [guildId], references: [id])
 }
