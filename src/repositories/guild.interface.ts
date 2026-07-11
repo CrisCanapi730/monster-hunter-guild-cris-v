@@ -5,6 +5,6 @@ export interface IGuildRepository{
     create(data: GuildCreateDto): Promise<Guild>;
     update(id: string, data: GuildUpdateDto): Promise<Guild>;
     delete(id: string): Promise<Guild>; 
-    findAll(): Promise<Guild[]>;
-    findById(id: string): Promise<Guild | null>;
+    getAll(): Promise<Guild[]>;
+    getById(id: string): Promise<Guild | null>;
 }

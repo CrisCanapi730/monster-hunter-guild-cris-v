@@ -16,10 +16,10 @@ export class GuildRepository implements IGuildRepository{
     delete(id: string): Promise<Guild>{
         return this.prisma.guild.delete({where: {id}});
     }
-    findAll(): Promise<Guild[]>{
+    getAll(): Promise<Guild[]>{
         return this.prisma.guild.findMany();
     }
-    findById(id: string): Promise<Guild | null>{
+    getById(id: string): Promise<Guild | null>{
         return this.prisma.guild.findUnique({where: {id}});
     }
 }
