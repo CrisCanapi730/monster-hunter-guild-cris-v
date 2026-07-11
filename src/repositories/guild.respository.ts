@@ -1,17 +1,16 @@
-import { Prisma, PrismaClient, Guild } from "../generated/prisma/client";
+import { PrismaClient, Guild } from "../generated/prisma/client";
 import { IGuildRepository } from "./guild.interface";
-import { prisma } from "../config/prisma";
-
+import { GuildCreateDto, GuildUpdateDto } from "../dto/guild.dto";
 
 export class GuildRepository implements IGuildRepository{
 
     constructor(private prisma: PrismaClient){}
 
-    create(data: Prisma.GuildCreateInput): Promise<Guild>{
+    create(data: GuildCreateDto): Promise<Guild>{
         return this.prisma.guild.create({data});
     }
 
-    update(id: string, data: Prisma.GuildUpdateInput): Promise<Guild>{
+    update(id: string, data: GuildUpdateDto): Promise<Guild>{
         return this.prisma.guild.update({ where: {id}, data});
     }
     delete(id: string): Promise<Guild>{
